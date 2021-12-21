@@ -1,0 +1,6 @@
+- crée un objet playlist (nom(input.value), genre(input.value), titres)
+- récupérer les valeurs de chaque input.
+- API pour recherché les titres rentré par l'utilsateur sur youtube
+- faire des container différents, pour les différents styles de playlist
+- append les playlist selon le genre rentré dans les bon container
+- sa sera déjà bien.
