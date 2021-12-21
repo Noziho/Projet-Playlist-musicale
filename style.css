@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #222;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    background: #1c1b1b;
+    color: white;
+}
+h1 {
+    font-size: 2.4rem;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: white;
+}
+
+.containerForPlaylist {
+    display: flex;
+    flex-flow: column wrap;
+    background: #1c1b1b;
+    width: 50%;
+    height: 50rem;
+    margin-top: 3%;
+    border-radius: 8px;
+}
+
+.containerTittleCategory {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerInfoPlaylist {
+    margin: 2rem;
+}
