@@ -37,8 +37,7 @@ h1 {
     display: flex;
     flex-flow: column wrap;
     background: #1c1b1b;
-    width: 50%;
-    height: 50rem;
+    width: 55%;
     margin-top: 3%;
     border-radius: 8px;
 }
@@ -52,4 +51,27 @@ h1 {
 
 .containerInfoPlaylist {
     margin: 2rem;
+}
+
+button {
+    width: 25%;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #1ed760;
+    border: 1px solid #1ed760;
+}
+
+.styleButton {
+    background-color: #109e44;
+}
+
+input {
+    border-radius: 4px;
+}
+
+#containerPlaylist {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
 }
