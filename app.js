@@ -8,7 +8,7 @@ function Playlist(title, type) {
 
     const artiste = document.getElementById('artiste');
     const musicTitle = document.getElementById('musicTitle');
-    const musicLink = document.getElementById('linkMusic')
+    const musicLink = document.getElementById('linkMusic');
 
     this.createDivForPlaylist = function () {
         const createDiv = document.createElement('div');
@@ -30,6 +30,8 @@ function Playlist(title, type) {
     this.titlePlaylist = function () {
         counter.toString();
         const title = document.createElement('h1');
+        title.style.fontSize = "5rem";
+        title.style.color = "#1ed760";
         title.innerHTML = this.titre;
 
         let playlist1 = document.getElementById(`playlist0`);
@@ -53,6 +55,7 @@ function Playlist(title, type) {
 
         let musicLi = document.createElement('a');
         musicLi.setAttribute('href', musicLink.value);
+        musicLi.setAttribute('target', '_blank');
         musicLi.innerHTML = "Lien youtube";
 
         let playlist1 = document.getElementById(`playlist0`);
