@@ -10,13 +10,14 @@ function Playlist(title, type) {
     const musicTitle = document.getElementById('musicTitle');
     const musicLink = document.getElementById('linkMusic');
 
+    // a function for create a containenr for all playlist
     this.createDivForPlaylist = function () {
         const createDiv = document.createElement('div');
         createDiv.id = "containerPlaylist";
 
         document.getElementsByClassName('container')[0].append(createDiv);
     }
-
+    // a function for create a playlist with div.
     this.createPlaylist = function () {
 
         const createPlaylistDiv = document.createElement('div');
@@ -26,7 +27,7 @@ function Playlist(title, type) {
 
         document.getElementById('containerPlaylist').append(createPlaylistDiv);
     }
-
+    //A function for create the header of playlist, title of playlist + type of playlist music;
     this.titlePlaylist = function () {
         counter.toString();
         const title = document.createElement('h1');
@@ -43,7 +44,7 @@ function Playlist(title, type) {
         playlist1.append(title, genre);
 
     }
-
+    // function for create every element for printing the music added by the user.
     this.insidePlaylist = function () {
         let musicTit = document.createElement('p');
         musicTit.style.marginTop = "3%";
@@ -65,13 +66,15 @@ function Playlist(title, type) {
 
 }
 
-// both event listenner is only for the style button
+// both event listenner is only for the style button.
+
 buttonStyleEvent.mousedown(() => {
     buttonStyleEvent.addClass('styleButton');
 })
 
 buttonStyleEvent.mouseup(() => {
     buttonStyleEvent.removeClass('styleButton');
+    //create a new playlist when the button pressed.
     let playlist = new Playlist(document.getElementById('playlistName').value, 'classique');
     if (oneTime === 0) {
         playlist.createDivForPlaylist();
@@ -80,6 +83,7 @@ buttonStyleEvent.mouseup(() => {
     playlist.createPlaylist();
     playlist.titlePlaylist();
 
+    // an event listenner for add a music on the playlist user.
     let addTitle = document.getElementById('addMusic');
     addTitle.addEventListener('click', function () {
         playlist.insidePlaylist();
