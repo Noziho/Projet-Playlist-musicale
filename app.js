@@ -1,6 +1,7 @@
 const buttonStyleEvent = $('#createPlaylist');
 let counter = 0;
 let oneTime = 0;
+let counterIdButton = 1;
 
 function Playlist(title, type) {
     this.titre = title;
@@ -75,7 +76,7 @@ buttonStyleEvent.mousedown(() => {
 buttonStyleEvent.mouseup(() => {
     buttonStyleEvent.removeClass('styleButton');
     //create a new playlist when the button pressed.
-    let playlist = new Playlist(document.getElementById('playlistName').value, 'classique');
+    let playlist = new Playlist(document.getElementById('playlistName').value);
     if (oneTime === 0) {
         playlist.createDivForPlaylist();
         oneTime = 1;
@@ -89,4 +90,16 @@ buttonStyleEvent.mouseup(() => {
         playlist.insidePlaylist();
     })
 
+    counterIdButton +=2;
+    let editButton = document.createElement('button');
+    editButton.innerHTML = "Modifiez votre playlist";
+    editButton.id = counterIdButton.toString();
+    editButton.classList = "editButton";
+    console.log(editButton);
+
+    editButton.addEventListener('click', function () {
+        console.log('oui');
+    })
+
+    document.querySelector('.playlist').append(editButton);
 })
